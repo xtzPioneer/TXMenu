@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TXMenuNavigationBar.h"
+@class TXMenuNavigationBar;
 @class TXMenu;
+
 @protocol TXMenuDelegate <NSObject>
 @optional
 - (void)navigationBar:(TXMenuNavigationBar*)navigationBar clickEvent:(id)sender index:(NSInteger)index;
 - (void)menu:(TXMenu*)menu slipEvent:(id)sender index:(NSInteger)index;
 @end
-@interface TXMenu : UIView<TXMenuNavigationBarDelegate>
+@interface TXMenu : UIView
 /*导航栏高度*/
 @property (nonatomic,assign)CGFloat navigationBarHeight;
 /*导航栏颜色*/
@@ -32,7 +33,7 @@
 /*代理属性*/
 @property (nonatomic,weak)id<TXMenuDelegate> delegate;
 /*主视图置动画*/
-- (void)mainViewAnimationWithIndex:(NSInteger)Index
+- (void)mainViewAnimationWithIndex:(NSInteger)Index;
 /*构造方法*/
 - (instancetype)initWithFrame:(CGRect)frame number:(NSInteger)number;
 /*移除所有MainView*/

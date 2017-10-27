@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TXMenuNavigationCell.h"
-#import "TXUnderLine.h"
+@class TXMenuNavigationCell;
 @class TXMenuNavigationBar;
+@class TXUnderLine;
+
 @protocol TXMenuNavigationBarDelegate <NSObject>
 @optional
 - (void)menuNavigationBar:(TXMenuNavigationBar*)navigationBar clickEvent:(id)sender;

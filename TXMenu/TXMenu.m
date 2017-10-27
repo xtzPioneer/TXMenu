@@ -7,7 +7,10 @@
 //
 
 #import "TXMenu.h"
-@interface TXMenu ()<UIScrollViewDelegate>
+#import "TXMenuNavigationBar.h"
+#import "TXMenuNavigationCell.h"
+
+@interface TXMenu ()<UIScrollViewDelegate,TXMenuNavigationBarDelegate>
 @property (nonatomic,weak)TXMenuNavigationBar * navigationBar;
 @property (nonatomic,assign)NSInteger number;
 @property (nonatomic,weak)UIScrollView * scrollView;

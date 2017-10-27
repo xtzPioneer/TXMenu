@@ -7,6 +7,9 @@
 //
 
 #import "TXMenuNavigationBar.h"
+#import "TXMenuNavigationCell.h"
+#import "TXUnderLine.h"
+
 @interface TXMenuNavigationBar ()
 @property (nonatomic,assign)NSInteger number;
 @end;

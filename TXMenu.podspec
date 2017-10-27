@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/xtzPioneer/TXMenu'
   s.license      = 'MIT'
   s.author       = { 'zhangxiong' => 'xtz_pioneer@163.com' }
-  s.platform     = :ios
+  s.platform     = :ios, '8.0'
   s.source       = { :git => 'https://github.com/xtzPioneer/TXMenu.git', :tag => s.version.to_s }
   s.source_files = 'TXMenu/**/*.{h,m}'
   s.requires_arc = true  

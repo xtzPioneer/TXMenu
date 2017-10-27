@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'TXMenu'
-  s.version      = '0.1'
+  s.version      = '0.2'
   s.summary      = '自定义菜单，并且可以控制自己定义的任何视图。'
   s.description  = <<-DESC
 			自定义菜单，并且可以控制自己定义的任何视图。更多功能等待你的发现。

@@ -31,6 +31,8 @@
 - (void)setupMainViewFrame;
 /*代理属性*/
 @property (nonatomic,weak)id<TXMenuDelegate> delegate;
+/*主视图置动画*/
+- (void)mainViewAnimationWithIndex:(NSInteger)Index
 /*构造方法*/
 - (instancetype)initWithFrame:(CGRect)frame number:(NSInteger)number;
 /*移除所有MainView*/

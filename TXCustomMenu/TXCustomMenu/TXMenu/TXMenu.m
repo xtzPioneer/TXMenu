@@ -122,7 +122,7 @@
         [(UIView*)[self.scrollView.subviews lastObject] removeFromSuperview];
     }
 }
-/*切换主视图置动画*/
+/*主视图置动画*/
 - (void)mainViewAnimationWithIndex:(NSInteger)Index{
     CGFloat x=self.scrollView.frame.size.width*Index;
     [UIView animateWithDuration:0.25 animations:^{

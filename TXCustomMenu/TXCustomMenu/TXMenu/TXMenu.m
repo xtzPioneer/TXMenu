@@ -22,13 +22,24 @@
     if (self = [super initWithFrame:frame]) {
         // 数量
         self.number=number;
+        // 宽高
+        CGFloat width=frame.size.width;
+        CGFloat height=frame.size.height;
         // 菜单导航栏
-        TXMenuNavigationBar * navigationBar=[[TXMenuNavigationBar alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width,49) number:number];
+        CGFloat navigationBarX=0;
+        CGFloat navigationBarY=0;
+        CGFloat navigationBarW=width;
+        CGFloat navigationBarH=49;
+        TXMenuNavigationBar * navigationBar=[[TXMenuNavigationBar alloc]initWithFrame:CGRectMake(navigationBarX, navigationBarY, navigationBarW,navigationBarH) number:number];
         navigationBar.backgroundColor=[UIColor grayColor];
         navigationBar.delegate=self;
         self.navigationBar=navigationBar;
-        //scrollView
-        UIScrollView * scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(navigationBar.frame), self.frame.size.width, self.frame.size.height)];
+        // scrollView
+        CGFloat scrollViewX=0;
+        CGFloat scrollViewY=CGRectGetMaxY(self.navigationBar.frame);
+        CGFloat scrollViewW=width;
+        CGFloat scrollViewH=height-scrollViewY;
+        UIScrollView * scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(scrollViewX, scrollViewY, scrollViewW, scrollViewH)];
         scrollView.delegate=self;
         scrollView.pagingEnabled=YES;
         scrollView.showsHorizontalScrollIndicator = NO;

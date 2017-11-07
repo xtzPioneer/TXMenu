@@ -2,8 +2,8 @@
 //  TXMenu.h
 //  TXCustomMenu
 //
-//  Created by komlin on 2017/10/26.
-//  Copyright © 2017年 komlin. All rights reserved.
+//  Created by 张雄 on 2017/10/26.
+//  Copyright © 2017年 张雄. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,9 +15,14 @@
 - (void)navigationBar:(TXMenuNavigationBar*)navigationBar clickEvent:(id)sender index:(NSInteger)index;
 - (void)menu:(TXMenu*)menu slipEvent:(id)sender index:(NSInteger)index;
 @end
+
 @interface TXMenu : UIView
 /*导航栏高度*/
 @property (nonatomic,assign)CGFloat navigationBarHeight;
+/*导航栏标题字体大小*/
+@property (nonatomic,assign)CGFloat navigationBarTitleFontOfSize;
+/*导航栏标题字体颜色*/
+@property (nonatomic,strong)UIColor * navigationBarTitleFontOfColor;
 /*导航栏颜色*/
 @property (nonatomic,strong)UIColor * navigationBarBackgroundColor;
 /*导航栏图标集合*/
@@ -38,4 +43,5 @@
 - (instancetype)initWithFrame:(CGRect)frame number:(NSInteger)number;
 /*移除所有MainView*/
 - (void)removeAllMainView;
+
 @end

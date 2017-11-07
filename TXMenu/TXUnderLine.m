@@ -2,8 +2,8 @@
 //  TXUnderLine.m
 //  TXCustomMenu
 //
-//  Created by komlin on 2017/10/27.
-//  Copyright © 2017年 komlin. All rights reserved.
+//  Created by 张雄 on 2017/10/27.
+//  Copyright © 2017年 张雄. All rights reserved.
 //
 
 #import "TXUnderLine.h"

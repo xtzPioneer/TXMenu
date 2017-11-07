@@ -2,8 +2,8 @@
 //  TXMenu.m
 //  TXCustomMenu
 //
-//  Created by komlin on 2017/10/26.
-//  Copyright © 2017年 komlin. All rights reserved.
+//  Created by 张雄 on 2017/10/26.
+//  Copyright © 2017年 张雄. All rights reserved.
 //
 
 #import "TXMenu.h"
@@ -92,6 +92,19 @@
     self.scrollView.frame=scrollViewFrame;
     [self setupMainViewFrame];
 }
+/*导航栏标题字体大小*/
+- (void)setNavigationBarTitleFontOfSize:(CGFloat)navigationBarTitleFontOfSize{
+    _navigationBarTitleFontOfSize=navigationBarTitleFontOfSize;
+    self.navigationBar.titleFontOfSize=_navigationBarTitleFontOfSize;
+    [self.navigationBar reloadData];
+}
+/*导航栏标题字体颜色*/
+-(void)setNavigationBarTitleFontOfColor:(UIColor *)navigationBarTitleFontOfColor{
+    _navigationBarBackgroundColor=navigationBarTitleFontOfColor;
+    self.navigationBar.titleFontOfColor=_navigationBarBackgroundColor;
+    [self.navigationBar reloadData];
+}
+
 /*导航栏颜色*/
 - (void)setNavigationBarBackgroundColor:(UIColor *)navigationBarBackgroundColor{
     _navigationBarBackgroundColor=navigationBarBackgroundColor;
@@ -115,7 +128,7 @@
 }
 #pragma mark - UIScrollViewDelegate 方法
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-     NSInteger curIndex = scrollView.contentOffset.x/self.scrollView.frame.size.width;
+    NSInteger curIndex = scrollView.contentOffset.x/self.scrollView.frame.size.width;
     [self.navigationBar underlineAnimationWithIndex:curIndex];
     if ([self.delegate respondsToSelector:@selector(menu:slipEvent:index:)]) {
         [self.delegate menu:self slipEvent:self.mainViews[curIndex] index:curIndex];
@@ -144,12 +157,13 @@
     }];
 }
 
+
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

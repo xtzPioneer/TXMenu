@@ -2,8 +2,8 @@
 //  TXMenuNavigationBar.m
 //  TXCustomMenu
 //
-//  Created by komlin on 2017/10/26.
-//  Copyright © 2017年 komlin. All rights reserved.
+//  Created by 张雄 on 2017/10/26.
+//  Copyright © 2017年 张雄. All rights reserved.
 //
 
 #import "TXMenuNavigationBar.h"
@@ -20,6 +20,8 @@
     if (self =[super initWithFrame:frame] ) {
         _cells=[NSMutableArray array];
         self.number=number;
+        self.titleFontOfSize=11;
+        self.titleFontOfColor=[UIColor redColor];
     }
     return self;
 }
@@ -67,7 +69,7 @@
     CGFloat height = self.frame.size.height;
     /*注意：用CGFloat 6s：会在出现有面出现一条竖线
      处理方法：向下取整
-    */
+     */
     int menuW=width/self.number;
     CGFloat menuH=height;
     for (int index=0; index<_number; index++) {
@@ -89,6 +91,8 @@
         cell.backgroundColor=self.backgroundColor;
         cell.imageView.image=[UIImage imageNamed:self.icons[index]];
         cell.titleLabel.text=self.titles[index];
+        cell.titleLabel.font=[UIFont systemFontOfSize:self.titleFontOfSize];
+        cell.titleLabel.textColor=self.titleFontOfColor;
     }
 }
 /*手势事件*/
@@ -116,11 +120,11 @@
     }
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

@@ -2,8 +2,8 @@
 //  TXMenuNavigationBar.h
 //  TXCustomMenu
 //
-//  Created by komlin on 2017/10/26.
-//  Copyright © 2017年 komlin. All rights reserved.
+//  Created by 张雄 on 2017/10/26.
+//  Copyright © 2017年 张雄. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,6 +15,7 @@
 @optional
 - (void)menuNavigationBar:(TXMenuNavigationBar*)navigationBar clickEvent:(id)sender;
 @end
+
 @interface TXMenuNavigationBar : UIView
 /*图标集合*/
 @property (nonatomic,strong)NSArray<NSString*> * icons;
@@ -22,6 +23,10 @@
 @property (nonatomic,strong)NSArray<NSString*> * titles;
 /*默认选择页*/
 @property (nonatomic,assign)NSInteger defaultIndex;
+/*字体大小*/
+@property (nonatomic,assign)CGFloat   titleFontOfSize;
+/*字体颜色*/
+@property (nonatomic,strong)UIColor * titleFontOfColor;
 /*菜单视图的集合*/
 @property (nonatomic,strong,readonly)NSMutableArray<TXMenuNavigationCell*> * cells;
 /*下划线*/
@@ -38,4 +43,5 @@
 - (instancetype)initWithFrame:(CGRect)frame number:(NSInteger)number;
 /*移除所有Cell*/
 - (void)removeAllSubView;
+
 @end

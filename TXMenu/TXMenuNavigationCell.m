@@ -2,17 +2,17 @@
 //  TXMenuNavigationCell.m
 //  TXCustomMenu
 //
-//  Created by komlin on 2017/10/26.
-//  Copyright © 2017年 komlin. All rights reserved.
+//  Created by 张雄 on 2017/10/26.
+//  Copyright © 2017年 张雄. All rights reserved.
 //
 
 #import "TXMenuNavigationCell.h"
 
 @interface TXMenuNavigationCell ()
-
 @end
 
 @implementation TXMenuNavigationCell
+
 - (instancetype)init{
     if (self = [super init]) {
         [self initializingSubViews];
@@ -31,7 +31,7 @@
     
     UILabel * titleLabel=[[UILabel alloc]init];
     titleLabel.numberOfLines=0;
-    titleLabel.textColor=[UIColor whiteColor];
+    titleLabel.textColor=[UIColor redColor];
     titleLabel.font=[UIFont systemFontOfSize:11];
     titleLabel.textAlignment=NSTextAlignmentCenter;
     self.titleLabel=titleLabel;
@@ -56,11 +56,11 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

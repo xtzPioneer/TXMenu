@@ -77,10 +77,9 @@
         cell.frame=CGRectMake(index*menuW, 0, menuW, menuH);
     }
     CGFloat underlineX=0;
-    CGFloat underlineH=height/6.125;
+    int underlineH=height/6.125;
     CGFloat underlineY=height-underlineH;
-    CGFloat underlineW=menuW;
-    self.underLine.frame=CGRectMake(underlineX, underlineY, underlineW, underlineH);
+    self.underLine.frame=CGRectMake(underlineX, underlineY, menuW, underlineH);
     self.underLine.backgroundColor=self.backgroundColor;
     [self underlineAnimationWithIndex:self.defaultIndex];
 }

@@ -32,25 +32,5 @@
     menu.navigationBarHeight=tRealLength(40);
     menu.navigationBarTitleFontOfColor=[UIColor whiteColor];
     self.menu=menu;
-    [self.view addSubview:menu];
-    UIButton * button=[[UIButton alloc]initWithFrame:CGRectMake((self.view.frame.size.width-80)/2, 330, 80, 40)];
-    [button setTitle:@"刷新数据" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    button.backgroundColor=[UIColor redColor];
-    button.layer.cornerRadius=10;
-    button.layer.masksToBounds=YES;
-    [button addTarget:self action:@selector(buttonEvent) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    
-    UIButton * button2=[[UIButton alloc]initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, 400, 150, 40)];
-    [button2 setTitle:@"重新设置导航高度" forState:UIControlStateNormal];
-    [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [button2 setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    button2.backgroundColor=[UIColor redColor];
-    button2.layer.cornerRadius=10;
-    button2.layer.masksToBounds=YES;
-    [button2 addTarget:self action:@selector(buttonEvent1) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button2];
 }
 ```

@@ -3,3 +3,8 @@
 ![](https://github.com/xtzPioneer/TXMenu/raw/master/自定义菜单.gif)
 ### cocoapods集成
 * pod 'TXMenu', '~> 0.2.3'
+### 使用方法
+* 导入头文件 <TXMenu.h>  直接使用TXMenu...即可
+```objc
+
+```
